@@ -1,4 +1,5 @@
 import 'package:algorithms_data_structures/data_structures/linked_list/linked_list.dart';
+import 'package:algorithms_data_structures/data_structures/queue/queue_stack.dart';
 import 'package:algorithms_data_structures/data_structures/stack/stack.dart';
 
 import 'data_structures/queue/queue_linked_list.dart';
@@ -68,4 +69,16 @@ void main() {
   print(queueRingBuffer);
   queueRingBuffer.peek;
   print(queueRingBuffer);
+
+  ///Queue (Double-Stack implementation)
+  print('-----------Queue (Double-Stack implementation)-----------');
+  final queueStack = QueueStack<String>();
+  queueStack.enqueue('Sonia');
+  queueStack.enqueue('Archick');
+  queueStack.enqueue('Denys');
+  print(queueStack);
+  queueStack.dequeue();
+  print(queueStack);
+  queueStack.peek;
+  print(queueStack);
 }
