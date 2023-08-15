@@ -29,6 +29,8 @@ class QueueStack<E> implements Queue {
   // TODO: implement peek
   get peek => _leftStack.isNotEmpty ? _leftStack.last : _rightStack.first;
 
+  int get length => _leftStack.length + _rightStack.length;
+
   @override
   String toString() {
     final combined = [

@@ -1,6 +1,7 @@
 import 'package:algorithms_data_structures/data_structures/linked_list/linked_list.dart';
 import 'package:algorithms_data_structures/data_structures/queue/queue_stack.dart';
 import 'package:algorithms_data_structures/data_structures/stack/stack.dart';
+import 'package:algorithms_data_structures/data_structures/tree/tree.dart';
 
 import 'data_structures/queue/queue_linked_list.dart';
 import 'data_structures/queue/queue_list.dart';
@@ -81,4 +82,26 @@ void main() {
   print(queueStack);
   queueStack.peek;
   print(queueStack);
+
+  ///Tree(Depth-First Traversal)
+  print('-----------Tree(Depth-First Traversal)-----------');
+  final tree = TreeNode.makeBeverageTree();
+  tree.forEachDepthFirst(
+    (node) => print(node.value),
+  );
+
+  ///Tree(Level-Order Traversal)
+  print('-----------Tree(Level-Order Traversal)-----------');
+  tree.forEachLevelOrder(
+    (node) => print(node.value),
+  );
+
+  ///Tree(Search)
+  print('-----------Tree(Search)-----------');
+  final searchResult = tree.search('ginger ale');
+  print(searchResult?.value);
+
+  ///Tree(Challenge #1)
+  print('-----------Tree(Challenge #1)-----------');
+  tree.challenge1PrintEachLevel(tree);
 }
