@@ -1,3 +1,4 @@
+import 'package:algorithms_data_structures/data_structures/binary_node/binary_node.dart';
 import 'package:algorithms_data_structures/data_structures/linked_list/linked_list.dart';
 import 'package:algorithms_data_structures/data_structures/queue/queue_stack.dart';
 import 'package:algorithms_data_structures/data_structures/stack/stack.dart';
@@ -104,4 +105,21 @@ void main() {
   ///Tree(Challenge #1)
   print('-----------Tree(Challenge #1)-----------');
   tree.challenge1PrintEachLevel(tree);
+
+  ///Binary Tree
+  print('-----------Binary Tree-----------');
+  final binaryTree = BinaryNode.createBinaryTree();
+  print(binaryTree);
+
+  ///Binary Tree(In-Order Traversal)
+  print('-----------Binary Tree(In-Order Traversal)-----------');
+  binaryTree.traverseInOrder(print);
+
+  ///Binary Tree(Pre-Order Traversal)
+  print('-----------Binary Tree(Pre-Order Traversal)-----------');
+  binaryTree.traversePreOrder(print);
+
+  ///Binary Tree(Post-Order Traversal)
+  print('-----------Binary Tree(Post-Order Traversal)-----------');
+  binaryTree.traversePostOrder(print);
 }
