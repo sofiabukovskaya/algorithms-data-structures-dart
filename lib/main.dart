@@ -1,4 +1,5 @@
 import 'package:algorithms_data_structures/data_structures/binary_node/binary_node.dart';
+import 'package:algorithms_data_structures/data_structures/binary_search_tree/binary_search_tree.dart';
 import 'package:algorithms_data_structures/data_structures/linked_list/linked_list.dart';
 import 'package:algorithms_data_structures/data_structures/queue/queue_stack.dart';
 import 'package:algorithms_data_structures/data_structures/stack/stack.dart';
@@ -122,4 +123,19 @@ void main() {
   ///Binary Tree(Post-Order Traversal)
   print('-----------Binary Tree(Post-Order Traversal)-----------');
   binaryTree.traversePostOrder(print);
+
+  ///Binary Search Tree
+  print('-----------Binary Search Tree-----------');
+  final binarySearchTree = BinarySearchTree();
+  for (var i = 0; i < 5; i++) {
+    binarySearchTree.insert(i);
+  }
+  print(binarySearchTree);
+  if (binarySearchTree.contains(5)) {
+    print('Found 5!');
+  } else {
+    print('Could not find 5');
+  }
+  binarySearchTree.remove(3);
+  print(binarySearchTree);
 }
